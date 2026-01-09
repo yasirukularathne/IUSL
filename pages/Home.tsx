@@ -1,160 +1,351 @@
-
-import React from 'react';
-import { ArrowRight, CheckCircle, Globe, Award, ShieldCheck, Zap } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import {
+  ArrowRight,
+  CheckCircle,
+  Globe,
+  Award,
+  ShieldCheck,
+  Zap,
+  Heart,
+  GraduationCap,
+  Building2,
+  Users,
+} from "lucide-react";
+import { Link } from "react-router-dom";
+import Hero from "@/src/Components/Hero";
 
 const Home: React.FC = () => {
   return (
     <div className="animate-in fade-in duration-700">
       {/* Hero Section */}
-      <section className="relative h-[85vh] flex items-center overflow-hidden bg-dark">
-        <img 
-          src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop" 
-          alt="IUSL Campus Students"
-          className="absolute inset-0 w-full h-full object-cover opacity-40"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-dark via-dark/70 to-transparent"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
-          <div className="max-w-2xl">
-            <h4 className="text-secondary font-bold tracking-widest uppercase mb-4 animate-bounce">Welcome to IUSL Campus</h4>
-            <h1 className="text-5xl md:text-7xl font-serif font-bold leading-tight mb-8">
-              Take your first step towards a <span className="text-secondary underline decoration-secondary/30">brighter future</span>
-            </h1>
-            <div className="flex flex-wrap gap-4">
-              <Link to="/portal" className="bg-primary text-white px-8 py-4 rounded-full font-bold text-lg flex items-center group transition-all hover:scale-105 shadow-xl shadow-primary/20">
-                Enroll Today
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link to="/about" className="bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition-all">
-                Learn More
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Hero />
 
-      {/* Intro Description */}
+      {/* Introduction Section */}
       <section className="py-24 bg-white">
-        <div className="max-w-5xl mx-auto px-4 text-center">
+        <div className="max-w-5xl mx-auto px-4">
           <div className="w-20 h-1 bg-secondary mx-auto mb-10"></div>
-          <p className="text-xl md:text-2xl font-light text-gray-700 leading-relaxed mb-12">
-            The doors of the IUSL Campus opened in 2020, with the primary aim of meeting the higher education and industrial needs of both local and international students residing right here in Sri Lanka. IUSL’s fully fledged campus offers a range of academic qualifications, including foundation courses and degree courses giving special emphasis on developing the students’ professional skills in addition to his/her academic skills.
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="flex flex-col items-center">
-              <Globe className="h-10 w-10 text-primary mb-2" />
-              <span className="font-bold text-primary">International</span>
-              <span className="text-xs text-gray-400 uppercase tracking-tighter">Standard Education</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <Award className="h-10 w-10 text-primary mb-2" />
-              <span className="font-bold text-primary">UK Accredited</span>
-              <span className="text-xs text-gray-400 uppercase tracking-tighter">Prestigious Degrees</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <ShieldCheck className="h-10 w-10 text-primary mb-2" />
-              <span className="font-bold text-primary">UGC Approved</span>
-              <span className="text-xs text-gray-400 uppercase tracking-tighter">Recognized Locally</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <Zap className="h-10 w-10 text-primary mb-2" />
-              <span className="font-bold text-primary">Est. 2020</span>
-              <span className="text-xs text-gray-400 uppercase tracking-tighter">Modern Vision</span>
-            </div>
+          <h2 className="text-3xl md:text-5xl font-serif font-bold text-primary text-center mb-12">
+            Our Mission and Vision
+          </h2>
+
+          <div className="space-y-10 text-lg text-gray-700 leading-relaxed text-justify">
+            <p>
+              The doors of the IUSL Campus opened in 2020, with the primary aim
+              of meeting the higher education and industrial needs of both local
+              and international students residing right here in Sri Lanka.
+              IUSL’s fully fledged campus offers a range of academic
+              qualifications, including foundation courses and degree courses
+              giving special emphasis on developing the students’ professional
+              skills in addition to his/her academic skills, which are crucial
+              for success in today's world.
+            </p>
+            <p>
+              The experienced and dedicated lecture panel and staff of the
+              institute are committed to ensuring that each student who
+              qualifies from IUSL is a well-rounded individual who is not only
+              armed with an academic qualification, but is also very familiar
+              with the professional nuances needed to be a successful part of
+              the workforce anywhere in the world. This focus on readiness
+              ensures our graduates excel in diverse and challenging
+              international environments across various industries globally.
+            </p>
+            <p>
+              Each course at the IUSL Campus is vetted and approved by the
+              University Grants Commission of Sri Lanka (UGC), and accredited to
+              prestigious universities in the UK. IUSL’s long term vision is to
+              create a holistic private university environment for students who
+              wish to obtain their higher education qualifications at private,
+              non-state universities, whilst still residing in Sri Lanka. IUSL’s
+              vision is to shine the brightest among all higher education
+              institutes in Sri Lanka.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Industry Collaboration */}
-      <section className="py-20 bg-slate-50">
+      {/* Partnering with Industry */}
+      <section className="py-24 bg-gradient-to-br from-slate-50 to-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-6">
-                Partnering with industry to add depth to the university experience
-              </h2>
-              <div className="space-y-6 text-gray-600 leading-relaxed text-lg">
-                <p>
-                  At IUSL, we strongly believe that first-hand work experience at real workplaces provides the best practical conditioning for students. This is why we facilitate industry training and internship programmes at acclaimed public and private workplaces for each of our students.
-                </p>
-                <p>
-                  In addition to obtaining experiential learning, on-the-job training helps students gain invaluable professional skills which employers today actively seek. IUSL is geared towards creating the best environment for this.
-                </p>
-              </div>
-              <Link to="/life" className="mt-8 inline-flex items-center text-primary font-bold hover:underline">
-                Explore Student Placements <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </div>
-            <div className="relative">
-              <img 
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop" 
+          <div className="text-center mb-16">
+            <span className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-4">
+              Industry Partnerships
+            </span>
+            <h2 className="text-3xl md:text-5xl font-serif font-bold text-primary">
+              Partnering with Industry to Add Depth to the University Experience
+            </h2>
+          </div>
+          <div className="grid lg:grid-cols-2 gap-12 items-stretch">
+            <div className="relative group">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-3xl transform rotate-3 group-hover:rotate-1 transition-transform duration-300"></div>
+              <img
+                src="public/home1.webp"
                 alt="Industry Training"
-                className="rounded-2xl shadow-2xl"
+                className="relative rounded-3xl shadow-2xl w-full h-full object-cover min-h-[400px]"
               />
-              <div className="absolute -bottom-8 -left-8 bg-white p-6 rounded-xl shadow-xl max-w-xs hidden lg:block border border-slate-100">
-                <p className="text-primary font-bold text-lg mb-1">95% Employability</p>
-                <p className="text-gray-500 text-sm">Our graduates are preferred by top industrial partners in Sri Lanka and abroad.</p>
+              <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm p-6 rounded-2xl shadow-xl border border-slate-100">
+                <div className="flex items-center gap-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-xl">95%</span>
+                  </div>
+                  <div>
+                    <p className="text-primary font-bold text-lg">
+                      Employability Rate
+                    </p>
+                    <p className="text-gray-500 text-sm">
+                      Our graduates are preferred by top industrial partners in
+                      Sri Lanka and abroad.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col justify-center space-y-6">
+              <div className="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-primary hover:shadow-xl transition-shadow">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Building2 className="text-primary" size={24} />
+                  </div>
+                  <p className="text-gray-600 leading-relaxed text-justify">
+                    At IUSL, we strongly believe that first-hand work experience
+                    at real workplaces provides the best practical conditioning
+                    for students. This is why we facilitate industry training
+                    and internship programmes at acclaimed public and private
+                    workplaces for each of our students, to help them gain the
+                    practical experience of working on real-world projects. In
+                    addition to obtaining experiential learning, on-the-job
+                    training helps students gain invaluable professional skills
+                    which employers today actively seek for their teams.
+                  </p>
+                </div>
+              </div>
+              <div className="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-secondary hover:shadow-xl transition-shadow">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Award className="text-secondary" size={24} />
+                  </div>
+                  <p className="text-gray-600 leading-relaxed text-justify">
+                    All-in-all, skills development needs to be given as much
+                    importance as academic achievement, and IUSL is geared
+                    towards creating the best environment for this. We provide
+                    the resources and industry connections necessary to ensure
+                    that our students are not just graduates, but seasoned
+                    professionals ready to take on the world. This commitment to
+                    practical excellence is what distinguishes our university
+                    from others and provides a solid foundation for every
+                    student's career journey in the field.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Leadership Section */}
-      <section className="py-24 bg-white overflow-hidden">
+      {/* Fostering Leadership Section */}
+      <section className="py-24 bg-gradient-to-br from-slate-50 to-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row-reverse gap-16 items-center">
-            <div className="w-full md:w-1/2">
-              <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-6">
-                Fostering leadership qualities and the best student experience
-              </h2>
-              <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-                The experienced and dedicated lecture panel and staff of the institute are committed to ensuring that each student who qualifies from IUSL is a well-rounded individual who is not only armed with an academic qualification, but is also very familiar with the professional nuances needed to be a successful part of the workforce anywhere in the world.
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div className="flex items-start space-x-3">
-                  <CheckCircle className="text-secondary h-6 w-6 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700 font-medium">Clubs and Societies</span>
+          <div className="text-center mb-16">
+            <span className="inline-block bg-secondary/10 text-secondary px-4 py-2 rounded-full text-sm font-semibold mb-4">
+              Student Success
+            </span>
+            <h2 className="text-3xl md:text-5xl font-serif font-bold text-primary">
+              Fostering Leadership Qualities and the Best Student Experience
+            </h2>
+          </div>
+          <div className="grid lg:grid-cols-2 gap-12 items-stretch">
+            <div className="flex flex-col justify-center space-y-6">
+              <div className="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-primary hover:shadow-xl transition-shadow">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Heart className="text-primary" size={24} />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-primary text-lg mb-2">
+                      Mental Health & Wellbeing
+                    </h4>
+                    <p className="text-gray-600 leading-relaxed text-justify">
+                      The youth today face immense demands from multiple
+                      sources, often leading to heightened stress levels and
+                      complex psychological challenges. At IUSL, we are acutely
+                      aware of this reality and take special care to ensure that
+                      the mental health of our students is always kept in check.
+                    </p>
+                  </div>
                 </div>
-                <div className="flex items-start space-x-3">
-                  <CheckCircle className="text-secondary h-6 w-6 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700 font-medium">Mental Health Support</span>
+              </div>
+              <div className="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-secondary hover:shadow-xl transition-shadow">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Users className="text-secondary" size={24} />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-primary text-lg mb-2">
+                      Leadership Development
+                    </h4>
+                    <p className="text-gray-600 leading-relaxed text-justify">
+                      The campus events organised by IUSL's clubs and societies
+                      encourage the development of interpersonal skills among
+                      students, bringing about heightened leadership traits,
+                      personal growth, and overall student satisfaction.
+                    </p>
+                  </div>
                 </div>
-                <div className="flex items-start space-x-3">
-                  <CheckCircle className="text-secondary h-6 w-6 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700 font-medium">Leadership Programs</span>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <CheckCircle className="text-secondary h-6 w-6 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700 font-medium">Academic Advising</span>
+              </div>
+              <div className="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-primary hover:shadow-xl transition-shadow">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <GraduationCap className="text-primary" size={24} />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-primary text-lg mb-2">
+                      Career Guidance
+                    </h4>
+                    <p className="text-gray-600 leading-relaxed text-justify">
+                      Career guidance and leadership are key factors that must
+                      be tackled during the academic journey. At IUSL, these
+                      needs are addressed as an on-going concern, ensuring
+                      students receive support to navigate their evolving
+                      aspirations.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="w-full md:w-1/2">
-              <div className="grid grid-cols-2 gap-4">
-                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop" className="rounded-xl h-64 w-full object-cover shadow-lg" alt="Campus Life" />
-                <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=2070&auto=format&fit=crop" className="rounded-xl h-64 w-full object-cover shadow-lg mt-8" alt="Teamwork" />
+            <div className="relative group">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-3xl transform rotate-3 group-hover:rotate-1 transition-transform duration-300"></div>
+              <img
+                src="public/home2.webp"
+                alt="Campus Life"
+                className="relative rounded-3xl shadow-2xl w-full h-full object-cover min-h-[400px]"
+              />
+              <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm p-6 rounded-2xl shadow-xl border border-slate-100">
+                <div className="flex justify-around items-center">
+                  <div className="text-center">
+                    <p className="text-2xl font-bold text-primary">20+</p>
+                    <p className="text-sm text-gray-500">Student Clubs</p>
+                  </div>
+                  <div className="w-px h-10 bg-slate-200"></div>
+                  <div className="text-center">
+                    <p className="text-2xl font-bold text-primary">50+</p>
+                    <p className="text-sm text-gray-500">Events/Year</p>
+                  </div>
+                  <div className="w-px h-10 bg-slate-200"></div>
+                  <div className="text-center">
+                    <p className="text-2xl font-bold text-primary">100%</p>
+                    <p className="text-sm text-gray-500">Support</p>
+                  </div>
+                </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* World Class Academics */}
+      <section className="py-24 bg-primary text-white">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="flex items-center justify-center space-x-4 mb-10">
+            <GraduationCap size={48} className="text-secondary" />
+            <h2 className="text-3xl md:text-5xl font-serif font-bold">
+              World Class Academics
+            </h2>
+          </div>
+          <div className="space-y-10 text-lg md:text-xl text-blue-100 leading-relaxed text-justify italic">
+            <p>
+              Among the higher education institutes in Sri Lanka, the IUSL
+              campus offers UK accredited, University Grants Commission (UGC)
+              approved academic qualifications for anyone wishing to pursue
+              their higher studies in a non-state university in the country. The
+              students of the IUSL thrive while obtaining their desired academic
+              qualifications thanks to several unique factors, including
+              academic-industry collaboration that lays the foundation for
+              exceptional work experience as well as academic skills which are
+              obtained here.
+            </p>
+            <p>
+              Academic skills are obtained with the support of academic experts
+              who are always at hand to provide the necessary advice and
+              guidance. This mentorship is fundamental to our mission, ensuring
+              that students receive personalized attention throughout their
+              studies. By integrating high-level academic theory with practical
+              industrial insights, we offer a comprehensive educational package
+              that is designed to meet the highest international standards while
+              remaining deeply rooted in the local context of Sri Lankan
+              educational excellence.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Life at the Campus */}
+      <section className="py-24 bg-white">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="flex items-center justify-center space-x-4 mb-10">
+            <Heart size={48} className="text-secondary" />
+            <h2 className="text-3xl md:text-5xl font-serif font-bold text-primary">
+              Life at the Campus
+            </h2>
+          </div>
+          <div className="text-lg md:text-2xl text-gray-700 leading-relaxed text-center font-light">
+            <p>
+              Through the myriad of courses, internships, activities and events
+              that students will be part of during their tenure at the IUSL
+              campus, they will ultimately, and most valuably, build strong,
+              long-lasting relationships that we hope will stay with them and
+              enrich their lives well into the future. This communal spirit is
+              the heartbeat of our campus, fostering a sense of belonging and
+              mutual support that helps every student achieve their full
+              potential during their university years.
+            </p>
+          </div>
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 text-center">
+              <Users className="mx-auto text-primary mb-4" size={40} />
+              <h4 className="font-bold text-primary mb-2">Vibrant Societies</h4>
+              <p className="text-sm text-gray-500">
+                Over 20+ active student organizations and hobby groups.
+              </p>
+            </div>
+            <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 text-center">
+              <Zap className="mx-auto text-primary mb-4" size={40} />
+              <h4 className="font-bold text-primary mb-2">Modern Facilities</h4>
+              <p className="text-sm text-gray-500">
+                Cutting-edge laboratories and digital learning hubs.
+              </p>
+            </div>
+            <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 text-center">
+              <Building2 className="mx-auto text-primary mb-4" size={40} />
+              <h4 className="font-bold text-primary mb-2">Central Location</h4>
+              <p className="text-sm text-gray-500">
+                Located in the heart of Colombo's education district.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-primary relative overflow-hidden">
+      <section className="py-20 bg-dark relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-blue-600/10 skew-x-12 translate-x-1/2"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-6 italic">
             "Your journey to excellence starts with a single step."
           </h2>
           <p className="text-blue-100 text-xl mb-10 max-w-2xl mx-auto">
-            Each course at the IUSL Campus is vetted and approved by the University Grants Commission of Sri Lanka (UGC), and accredited to prestigious universities in the UK.
+            Delivering a world-class education to prepare a new generation of
+            professionals to suit a global economy.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link to="/portal" className="bg-secondary text-dark px-10 py-4 rounded-full font-bold text-xl hover:scale-105 transition-all shadow-lg">
+            <Link
+              to="/portal"
+              className="bg-secondary text-dark px-10 py-4 rounded-full font-bold text-xl hover:scale-105 transition-all shadow-lg"
+            >
               Apply Now
             </Link>
-            <Link to="/contact" className="bg-transparent border-2 border-white text-white px-10 py-4 rounded-full font-bold text-xl hover:bg-white hover:text-primary transition-all">
+            <Link
+              to="/contact"
+              className="bg-transparent border-2 border-white text-white px-10 py-4 rounded-full font-bold text-xl hover:bg-white hover:text-primary transition-all"
+            >
               Talk to an Advisor
             </Link>
           </div>
