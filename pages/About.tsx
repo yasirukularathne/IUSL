@@ -16,7 +16,7 @@ const About: React.FC = () => {
     <div className="bg-white">
       <section className="relative h-[60vh] flex items-center justify-center text-white">
         <img
-          src="public\about-us.webp"
+          src="about-us.webp"
           alt="Life at IUSL"
           className="absolute inset-0 w-full h-full object-cover"
         />

@@ -118,7 +118,7 @@ const Navbar = () => {
           <div className="lg:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className={`hover:text-white/60 focus:outline-none ${
+              className={`hover:cursor-pointer focus:outline-none ${
                 isScrolled ? "text-gray-600" : "text-white"
               }`}
             >
