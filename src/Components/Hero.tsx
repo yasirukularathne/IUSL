@@ -21,9 +21,9 @@ const Hero = () => {
       {/* Background Image Carousel with Overlay */}
       {(() => {
         const images = [
-          "public/GraduationStudents.webp",
-          "public/students.webp",
-          "public/sport.webp",
+          "GraduationStudents.webp",
+          "students.webp",
+          "sport.webp",
         ];
         const [currentIndex, setCurrentIndex] = useState(0);
 

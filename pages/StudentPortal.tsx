@@ -188,7 +188,7 @@ const StudentPortal: React.FC = () => {
     <div className="bg-slate-50 min-h-screen ">
       <section className="relative h-[60vh] flex items-center justify-center text-white">
         <img
-          src="public/studentportal.webp"
+          src="studentportal.webp"
           alt="Student Enrollment at IUSL"
           className="absolute inset-0 w-full h-full object-cover"
         />

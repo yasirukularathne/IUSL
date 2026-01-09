@@ -78,7 +78,7 @@ const Home: React.FC = () => {
             <div className="relative group">
               <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-3xl transform rotate-3 group-hover:rotate-1 transition-transform duration-300"></div>
               <img
-                src="public/home1.webp"
+                src="home1.webp"
                 alt="Industry Training"
                 className="relative rounded-3xl shadow-2xl w-full h-full object-cover min-h-[400px]"
               />
@@ -214,7 +214,7 @@ const Home: React.FC = () => {
             <div className="relative group">
               <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-3xl transform rotate-3 group-hover:rotate-1 transition-transform duration-300"></div>
               <img
-                src="public/home2.webp"
+                src="home2.webp"
                 alt="Campus Life"
                 className="relative rounded-3xl shadow-2xl w-full h-full object-cover min-h-[400px]"
               />

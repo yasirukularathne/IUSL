@@ -60,7 +60,7 @@ const Navbar = () => {
             <Link to="/" className="flex items-center space-x-2">
               <div className="">
                 <img
-                  src="public\logo.png"
+                  src="logo.png"
                   alt="IUSL Logo"
                   className="object-contain h-20"
                 />

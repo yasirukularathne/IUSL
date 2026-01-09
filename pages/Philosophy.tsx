@@ -13,7 +13,7 @@ const Philosophy: React.FC = () => {
     <div className="bg-white">
       <section className="relative h-[60vh] flex items-center justify-center text-white">
         <img
-          src="public/OurPhilosophy.webp"
+          src="OurPhilosophy.webp"
           alt="Life at IUSL"
           className="absolute inset-0 w-full h-full object-cover object-top"
         />
@@ -60,7 +60,7 @@ const Philosophy: React.FC = () => {
             <div className="relative">
               <div className="absolute -top-10 -right-10 w-64 h-64 bg-secondary/20 rounded-full blur-3xl"></div>
               <img
-                src="public/Philosophy.webp"
+                src="Philosophy.webp"
                 alt="Philosophy"
                 className="rounded-3xl shadow-2xl relative z-10"
               />

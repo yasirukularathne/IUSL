@@ -37,7 +37,7 @@ const Faculties: React.FC = () => {
       {/* Hero Section - styled like About Us page */}
       <section className="relative h-[60vh] flex items-center justify-center text-white">
         <img
-          src="public/faculties.webp"
+          src="faculties.webp"
           alt="Life at IUSL"
           className="absolute inset-0 w-full h-full object-cover"
         />
