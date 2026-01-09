@@ -204,7 +204,7 @@ const StudentPortal: React.FC = () => {
       <div className="max-w-6xl mx-auto px-4 py-12">
         <div className="bg-white rounded-[2.5rem] shadow-2xl overflow-hidden border border-slate-200">
           {/* Header */}
-          <div className="bg-primary p-12 text-white relative overflow-hidden">
+          <div className="bg-primary p-6 md:p-12 text-white relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-20 -mt-20"></div>
             <div className="relative z-10 flex items-center space-x-4 mb-4">
               <GraduationCap size={40} className="text-secondary" />
@@ -219,7 +219,7 @@ const StudentPortal: React.FC = () => {
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="p-8 md:p-16 space-y-16">
+          <form onSubmit={handleSubmit} className="p-3 md:p-16 space-y-16">
             {/* 1. Student Name */}
             <section>
               <h3 className="text-xl font-bold text-primary mb-8 flex items-center">
@@ -615,8 +615,8 @@ const StudentPortal: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="bg-slate-50 p-6 rounded-2xl">
-                  <div className="grid grid-cols-2 md:grid-cols-2 gap-x-12 gap-y-4">
+                <div className=" rounded-2xl">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4">
                     {olRows.map((row, idx) => (
                       <div key={idx} className="flex space-x-2">
                         <input

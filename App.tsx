@@ -51,13 +51,13 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed shadow-md w-full top-0 z-50 ${
-        isScrolled ? "bg-white" : "bg-transparent"
+        isScrolled || isOpen ? "bg-white" : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20">
           <div className="flex items-center">
-            <Link to="/" className="flex items-center space-x-2">
+            <Link to="/" className="flex items-center space-x-1">
               <div className="">
                 <img
                   src="logo.png"
@@ -68,14 +68,14 @@ const Navbar = () => {
               <div>
                 <span
                   className={`text-2xl font-bold font-serif leading-none block ${
-                    isScrolled ? "text-primary" : "text-white"
+                    isScrolled || isOpen ? "text-primary" : "text-white"
                   }`}
                 >
                   IUSL
                 </span>
                 <span
                   className={`text-xs tracking-widest uppercase font-semibold ${
-                    isScrolled ? "text-dark" : "text-white"
+                    isScrolled || isOpen ? "text-dark" : "text-white"
                   }`}
                 >
                   Campus
@@ -118,12 +118,12 @@ const Navbar = () => {
           <div className="lg:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className={`hover:text-primary focus:outline-none ${
+              className={`hover:text-white/60 focus:outline-none ${
                 isScrolled ? "text-gray-600" : "text-white"
               }`}
             >
               {isOpen ? (
-                <X className="h-8 w-8" />
+                <X className="h-8 w-8 text-primary" />
               ) : (
                 <Menu className="h-8 w-8" />
               )}
@@ -168,9 +168,13 @@ const Footer = () => (
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
         <div className="space-y-6">
           <div className="flex items-center">
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="bg-primary p-2 rounded-lg">
-                <GraduationCap className="h-8 w-8 text-secondary" />
+            <Link to="/" className="flex items-center space-x-1">
+              <div className="">
+                <img
+                  src="logo.png"
+                  alt="IUSL Logo"
+                  className="object-contain h-20"
+                />
               </div>
               <div>
                 <span className="text-2xl font-bold font-serif leading-none block text-white">
